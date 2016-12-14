@@ -7,18 +7,16 @@ This program is intended to be used as a [Pandoc
 filter](http://pandoc.org/scripting.html) to update source code which contains
 such links.
 
-Assuming the Pandoc libraries and the GHC compiler are available, the filter
-can be compiled with `ghc --make lablinkfix`.
+The conversion for the archive catalogue is very simple. For the library
+catalogue, post IDs have changed, and the mappings from old ones to new ones
+are defined in `kataids.json`, with the format `"oldid":"newid"`. To build the
+filer (assuming the Pandoc libraries and the GHC compiler are available), run
+`make build`. At build, the mapping in `kataids.json` is coded into the filter,
+so if this file is changed, the filter should be rebuilt.
 
 I include the body content for [my article about the organization
 BiS](http://www.arbark.se/2014/11/foreningen-bibliotek-i-samhalle/), as a HTML
 file in the `examples` subdirectory. To run the filter on this file, and write
 to the target `examples/bisbodynew.html`, use 
-`pandoc -o examples/bisbodynew.html examples/bisbody.html --filter ./lablinxfix`.
+`pandoc -o examples/bisbodynew.html examples/bisbody.html --filter ./lablinkfix`.
 The filter should work with any format supported by Pandoc, not just HTML.
-
-The conversion for the archive catalogue is very simple. For the library
-catalogue, post IDs have changed, and old ones are mapped to new ones using the
-`kataids` map. Currently, it only contains data for the posts in the example
-file, and it obviously should be expanded and perhaps read from a CSV or JSON file
-or a database.
