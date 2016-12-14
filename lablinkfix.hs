@@ -1,7 +1,10 @@
 {-# LANGUAGE ViewPatterns #-}
+module Main where
+
 import Data.List
 import qualified Data.Map as Map
 import Text.Pandoc.JSON
+import Kataids
 
 main :: IO ()
 main = toJSONFilter lablinkfix
@@ -20,9 +23,3 @@ oldborgepref = "http://borge.arbark.se?"
 newborgepref = "http://borge.arbark.se?refkod="
 oldkatapref = "http://kata.arbark.se/wsRecInfo.asp?idno="
 newkatapref = "http://webbsok.mikromarc.se/Mikromarc3/web/detail.aspx?Unit=6475&db=arbark-swe&Id="
-
--- Maps old ID for Kata posts to new ones.
--- Should be expanded (read from CSV or JSON?).
-kataids = Map.fromList 
-    [("98324", "68468")
-    , ("101747", "71385")]
