@@ -10,7 +10,7 @@ such links.
 Assuming the Pandoc libraries and the GHC compiler are available, the filter
 can be compiled with `ghc --make lablinkfix`.
 
-I include the body content for [my article about the organizaton
+I include the body content for [my article about the organization
 BiS](http://www.arbark.se/2014/11/foreningen-bibliotek-i-samhalle/), as a HTML
 file in the `examples` subdirectory. To run the filter on this file, and write
 to the target `examples/bisbodynew.html`, use 
