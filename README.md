@@ -12,7 +12,11 @@ catalogue, post IDs have changed, and the mappings from old ones to new ones
 are defined in `kataids.json`, with the format `"oldid":"newid"`. To build the
 filer (assuming the Pandoc libraries and the GHC compiler are available), run
 `make build`. At build, the mapping in `kataids.json` is coded into the filter,
-so if this file is changed, the filter should be rebuilt.
+so if this file is changed, the filter should be rebuilt. The present version
+of `kataids.json` contains mappings for all links to posts in the library
+catalogue in the [RSS feed for the institution's webpage category with articles
+about their
+collections](http://www.arbark.se/kategori/ur-vara-samlingar/feed/).
 
 I include the body content for [my article about the organization
 BiS](http://www.arbark.se/2014/11/foreningen-bibliotek-i-samhalle/), as a HTML
