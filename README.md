@@ -20,8 +20,9 @@ collections](http://www.arbark.se/kategori/ur-vara-samlingar/feed/). Links to
 Kata posts with the prefixes `http://kata.arbark.se/wsRecInfo.asp?idno=` or 
 `http://kata.arbark.se/wsVolumes.asp?idno=` are updated with their matched IDs.
 Links to Kata searches with the prefix
-`http://kata.arbark.se/wsHitList.Asp?`are currently just redirected to the
-search page in the new system.
+`http://kata.arbark.se/wsHitList.Asp?` are currently just redirected to the
+search page in the new system. Links to posts without mapping for the IDs are
+also redirected to the search page.
 
 I include the body content for [my article about the organization
 BiS](http://www.arbark.se/2014/11/foreningen-bibliotek-i-samhalle/), as a HTML

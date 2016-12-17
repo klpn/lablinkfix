@@ -21,8 +21,9 @@ targetfix (stripPrefix oldkatasearchpref -> Just katasearch) = newkatasearch
 targetfix x = x
 
 newkata :: [Char] -> [Char]
-newkata oldkataid = newkatapref ++ newkataid
-    where (Just newkataid) = Map.lookup oldkataid kataids
+newkata oldkataid = case Map.lookup oldkataid kataids of
+                               Just newkataid -> newkatapref ++ newkataid 
+                               Nothing -> newkatasearch 
 
 oldborgepref = "http://borge.arbark.se?"
 newborgepref = "http://borge.arbark.se?refkod="
