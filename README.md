@@ -16,7 +16,12 @@ so if this file is changed, the filter should be rebuilt. The present version
 of `kataids.json` contains mappings for all links to posts in the library
 catalogue in the [RSS feed for the institution's webpage category with articles
 about their
-collections](http://www.arbark.se/kategori/ur-vara-samlingar/feed/).
+collections](http://www.arbark.se/kategori/ur-vara-samlingar/feed/). Links to
+Kata posts with the prefixes `http://kata.arbark.se/wsRecInfo.asp?idno=` or 
+`http://kata.arbark.se/wsVolumes.asp?idno=` are updated with their matched IDs.
+Links to Kata searches with the prefix
+`http://kata.arbark.se/wsHitList.Asp?`are currently just redirected to the
+search page in the new system.
 
 I include the body content for [my article about the organization
 BiS](http://www.arbark.se/2014/11/foreningen-bibliotek-i-samhalle/), as a HTML

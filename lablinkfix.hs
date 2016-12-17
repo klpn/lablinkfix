@@ -15,11 +15,19 @@ lablinkfix x = x
 
 targetfix :: [Char] -> [Char]
 targetfix (stripPrefix oldborgepref -> Just borgeid) = newborgepref ++ borgeid
-targetfix (stripPrefix oldkatapref -> Just oldkataid) = newkatapref ++ newkataid
-    where (Just newkataid) = Map.lookup oldkataid kataids
+targetfix (stripPrefix oldkatarecpref -> Just oldkataid) = newkata oldkataid
+targetfix (stripPrefix oldkatavolpref -> Just oldkataid) = newkata oldkataid
+targetfix (stripPrefix oldkatasearchpref -> Just katasearch) = newkatasearch
 targetfix x = x
+
+newkata :: [Char] -> [Char]
+newkata oldkataid = newkatapref ++ newkataid
+    where (Just newkataid) = Map.lookup oldkataid kataids
 
 oldborgepref = "http://borge.arbark.se?"
 newborgepref = "http://borge.arbark.se?refkod="
-oldkatapref = "http://kata.arbark.se/wsRecInfo.asp?idno="
+oldkatarecpref = "http://kata.arbark.se/wsRecInfo.asp?idno="
+oldkatavolpref = "http://kata.arbark.se/wsVolumes.asp?idno="
+oldkatasearchpref = "http://kata.arbark.se/wsHitList.Asp?"
 newkatapref = "http://webbsok.mikromarc.se/Mikromarc3/web/detail.aspx?Unit=6475&db=arbark-swe&Id="
+newkatasearch = "http://webbsok.mikromarc.se/Mikromarc3/web/search.aspx?ST=Form&Unit=6475&db=arbark-swe"
